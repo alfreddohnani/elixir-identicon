@@ -1,0 +1,7 @@
+;; identicon
+a 5 x 5 grid
+each grid is 50 pixels
+
+;; Structs
+can be assigned default values
+have compile-time checks
