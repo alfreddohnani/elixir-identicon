@@ -18,7 +18,7 @@ defmodule Identicon do
     image = :egd.create(250, 250)
     fill = :egd.color(color)
 
-    Enum.each(pixel_map, fn {start, stop} -> :egd.filledRectange(image, start, stop, fill) end)
+    Enum.each(pixel_map, fn {start, stop} -> :egd.filledRectangle(image, start, stop, fill) end)
 
     :egd.render(image)
   end
@@ -41,7 +41,7 @@ defmodule Identicon do
 
   def build_pixel_map(%Identicon.Image{grid: grid} = image) do
     pixel_map =
-      Enum.map(grid, fn {_code, index} = grid ->
+      Enum.map(grid, fn {_code, index} ->
         horizontal = rem(index, 5) * 50
         vertical = div(index, 5) * 50
         top_left = {horizontal, vertical}
