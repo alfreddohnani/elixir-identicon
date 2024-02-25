@@ -5,3 +5,12 @@ each grid is 50 pixels
 ;; Structs
 can be assigned default values
 have compile-time checks
+
+character lists
+integer lists
+
+;;
+IO.inspect([],charlists: :as_lists)  -> displays character lists as the original integer lists
+
+;;
+row ++ [second, first] -> append items to a list
